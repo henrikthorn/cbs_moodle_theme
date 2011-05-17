@@ -1,0 +1,61 @@
+10
+
+dir
+383
+https://svn.cbs.dk/svn/moodle/trunk/moodle/theme/cbslearn/pix/mod/data/field
+https://svn.cbs.dk/svn/moodle
+
+
+
+2010-05-12T14:01:24.112027Z
+36
+louv
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+661b7edf-24b5-41cb-89a1-cc98e48d175f
+
+file
+dir
+
+multimenu
+dir
+
+url
+dir
+
+menu
+dir
+
+text
+dir
+
+checkbox
+dir
+
+number
+dir
+
+radiobutton
+dir
+
+picture
+dir
+
+date
+dir
+
+textarea
+dir
+

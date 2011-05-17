@@ -1,0 +1,484 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+img#bg-image {
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+}
+
+/***** general tags *******/
+a{
+	color: 	#003F87;
+	text-decoration:none;		
+}
+
+a:hover{text-decoration:underline;}
+
+/************* tables *************/
+#region-main table.forumheaderlist {background-image: url([[pix:theme|transparent_70]]);border-radius:3px}
+#region-main table.forumheaderlist td, #region-main table.forumheaderlist{border:none;}
+#region-main table.forumheaderlist tr:nth-child(even){background-color: #eee;}
+
+/* table header */
+table thead tr {
+	background: url([[pix:theme|repeaterheader]]) repeat-x;
+    border-radius: 3px;
+}
+    #region-main th.header{background-image:none;}
+
+  
+/* rounded corners on last row of table */
+#region-main table tbody,
+#region-main table tbody tr:last-child,
+#region-main table tbody tr:last-child td:first-child,
+#region-main table tbody tr:last-child td:last-child{border-radius:0 0 3px 0;}
+
+#region-main table tbody{
+    background-color: white;
+}
+
+/** forumpost **/
+#region-main .forumpost{border: none;}
+    /*forum post subject (overskrift)*/
+    #region-main .forumpost .topic .subject{
+        text-transform: none;    
+        font-size: 1.2em;
+        color: #333;
+        
+    }    
+    /*forumpost author and date*/
+    #region-main .forumpost .topic .author{
+        font-style: italic;
+        font-size: 0.9em;    
+    }    
+    #region-main .forumpost .row {width:auto;}
+    #region-main .forumpost .row.header{
+        overflow:hidden;
+        height:40px;
+        line-height:normal;
+	    background: url([[pix:theme|repeaterheader]]) repeat-x;    
+    }
+
+    #region-main .forumpost .picture.left.header{border-top-left-radius:3px; }
+    #region-main .forumpost .topic.starter.header{
+        border-top-right-radius: 3px;
+        background-image:none; 
+    }
+    
+    #region-main .forumpost .topic.starter.header .subject{
+        height: 20px;
+        overflow: hidden;
+        line-height: 20px;
+    }
+    
+    #region-main .forumpost .row.header .picture{margin-top:-2px;}
+    #region-main .forumpost .row.header .topic{margin-top:4px;}
+    #region-main .forumpost .row.maincontent /*, .forumpost .row.side*/
+    {
+        padding: 3px;    
+	    background-color:#fff;
+	    border: 1px solid #ccc;
+	    border-radius: 3px;
+    }
+        #region-main .forumpost .row.maincontent .left{display:none;}
+
+
+/***** general classes *****/
+
+/* box */
+.generalbox {
+	background-color: white;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	padding-bottom:5px;
+}
+
+.mform fieldset{
+    border: 1px solid #bbb;
+    border-radius: 5px;
+}
+
+/** Tab tree (view, edit, comment etc. buttons) **/
+.tabtree{
+	background-image: url([[pix:theme|transparent_70]]);
+	border-radius: 3px;
+	padding:2px;
+	margin-top:3px;
+}
+.tabtree ul li{padding: 5px;}
+.tabtree ul li.selected:hover {background-color:inherit;}/*selected tab*/
+.tabtree ul li.selected a{font-weight:bold; text-decoration:none}
+
+#page-content #region-main .region-content {margin-top:3px;} /* top margin for all content */
+
+.block {
+	border: 0;
+	background-color: #F4F9FE;	
+	color: #5A5A5A;	
+	-webkit-border-radius: 3px;
+	font-size: 0.9em;	
+}
+
+
+/*block headers*/
+#region-pre .header,
+#region-post .header,
+#region-main .header{
+	height: 28px;
+	line-height: 28px;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 0.9em;
+	padding-left: 12px;
+	padding-right: 10px;
+	background-repeat: no-repeat;
+}
+#region-pre .header,
+#region-post .header{
+	background-image: url([[pix:theme|sideblockheader]]);
+    background-repeat:repeat-x;	
+    border-radius: 3px 3px 0 0;
+}
+#region-pre .header h2,
+#region-post .header h2{
+    overflow: hidden;
+    height: 30px;
+}
+
+#region-main .header{
+    background-image: url([[pix:theme|centerblockheader]]);
+    background-repeat:repeat-x;
+}
+
+#region-main .block .header{
+    border-radius: 3px 3px 0 0;
+}
+
+/*Show/hide + send to side panel buttons*/
+.header .block_action img{padding: 0 8px;}
+
+/* add colors to certain headers*/
+#my-page-content .block .header {background-image: url([[pix:theme|centerblockheader]]);}
+#my-page-content .block_color .header{ border-radius: 3px 3px 0 0; background-image: url([[pix:theme|centerblockheadertrans]]);}
+#my-page-content .block_green .header{ background-color: #008000; }
+#my-page-content .block_yellow .header{ background-color: #FDEE00; }
+#my-page-content .block_blue .header{ background-color: blue; }
+#my-page-content .block_red .header{ background-color: #FF030D; }
+#my-page-content .block_black .header{ background-color: black; }
+#my-page-content .block_purple .header{ background-color: #7D26CD; }
+#my-page-content .block_orange .header{ background-color: #FF8300; }
+
+/*** buttons ***/
+input[type="submit"],
+input[type="button"] { 
+    font-family:Arial; 
+    padding: 0 10px;
+    height: 21px;
+    background: url([[pix:theme|button]]) repeat-x;
+    color: #eee;
+	text-transform: uppercase;
+	font-weight:bold;
+	font-size: 11px;
+	line-height: 21px;
+}
+
+input[type="submit"]:hover {
+    background: url([[pix:theme|button_inverse]]) repeat-x;
+    color: #fff;
+} 
+
+
+.unlist{
+    padding: 5px;
+}
+
+/*left side dock*/
+#dock,
+#dock #dockeditempanel .dockeditempanel_content {	
+	background-color: transparent;	
+	background-image: url([[pix:theme|transparent_70]]);	
+	border-color:#aaa;	
+}
+#dock #dockeditempanel .dockeditempanel_content{background-image: url([[pix:theme|transparent_85]]);}
+
+#dock .dockedtitle{	
+	border-color: #aaa; 
+	border-top: none;	
+}
+
+/*blocks in left side*/
+#region-pre .block{}
+/*blocks in right side*/
+#region-post .block{}
+
+/*toolbox when block editing is on*/
+.block_with_controls .commands{
+	width: 100%;
+	float: left;
+	padding-bottom: 5px;
+	border-bottom: 1px solid #ccc;
+}
+.commands a{padding: 5px;}
+.block_with_controls .content{clear: both;}
+.block_with_controls.hidden .commands {display: none;} /*hide toolbox*/
+
+
+/*********** misc fixes ******************/
+
+/*disable padding in footer on Quiz page*/
+#page-mod-quiz-edit #page-footer {
+    padding-top: 0;
+}
+
+/** better visibility for **/
+table.userinfobox, /*view of user */ 
+.course-content ul.weeks, /*weekly outline*/
+.unlist /*list which are not lists*/
+{
+	background-color: #fff;
+	border-radius: 3px;
+	border: 1px solid #ddd;
+	padding-bottom:3px;
+}
+/** make  visible all immediate:
+divs, h2, forms **/
+#region-main .region-content > div,
+#region-main-box .region-content .box.message > div {border-radius:3px; margin-bottom: 10px;	background-image: url([[pix:theme|transparent_85]]);}
+#region-main .region-content > h2 {padding: 0 20px; background-image: url([[pix:theme|centerblockheader]]); height:29px; line-height:30px; text-transform: uppercase; border-radius:5px;color:white;}
+#region-main .region-content > form {
+    background-image: url([[pix:theme|transparent_85]]);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+
+/*explicit: avoid margin for certain headers */
+#region-main .region-content .header{padding-bottom:0;margin: 0;}
+#region-main .region-content h2.header{border-radius: 3px 3px 0 0}
+
+/** weekly outline **/
+#region-main ul.weeks>li{
+	border-top:1px solid #D0E2E7;	
+	padding: 5px 0;
+	margin:0;
+}
+#region-main ul.weeks>li:first-child{border-top:none;}
+#region-main ul.weeks li.current{
+	background-color:#D0E2E7;
+	border-color: #7A7C7E;
+	border-style: solid;	
+	border-width: 1px 0 1px 0;
+}
+
+#layout-table #middle-column div .felement * {max-width: 100%;} /* fix too long input fields */
+#intro.generalbox{margin-top:0} /* box in top of page */
+
+
+/*** MAIN PAGE CONTAINER ***/
+#page {
+    z-index:1;
+	width: 90%;
+	min-width: 1000px;
+	position:relative;    
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+    box-shadow: 0px 0px 15px #444;
+    -moz-box-shadow: 0px 0px 15px #444;
+    -webkit-box-shadow: 2px 3px 15px #444;	
+    border-radius: 6px;	
+}
+
+#page-content {	float:none; 	background-image: url([[pix:theme|transparent_dark]]);}
+
+#page-footer {
+	background-image: url([[pix:theme|footer2]]);	
+	height:40px;
+	border-radius: 0 0 6px 6px;
+	float:none;
+}
+#page-footer-top{
+    padding-top: 3px;
+    padding-bottom:3px;
+	color: white;
+	text-align: center;
+	font-weight: bold;
+}
+#page-footer-top a{
+	color: white;
+	padding-right:5px;
+	margin-left:4px;
+	text-transform: uppercase;
+	border-right: 1px solid white;
+}
+
+#page-footer-top a:last-child {
+    border: 0;
+}
+
+#page-footer-bottom{
+	color: white;
+	text-align: center;
+}
+
+/*************** PAGE HEADER START  ******************************/
+#page-header {
+	position:relative; 	
+	width: 100%;
+	height:170px;
+    background-image: url([[pix:theme|transparent_85]]);
+}
+
+#page-header-inner {
+    height: 110px;
+    padding:30px;
+}
+
+
+/*** cbs logo in header ***/
+div#logoTitle{	float:left;}
+
+/***container in right corner of header ***/
+div.headermenu{
+
+    position:relative;
+    top: -16px;
+    left: 5px;
+    width: 330px;
+    height: 80px;       
+}
+    #profile{
+        float:left;
+        text-align:right;
+        color: #000;
+        font-size: 11px;
+        padding: 5px;
+        font-size: 1em;
+        height: 70px;  
+        width: 230px;              
+        
+        background-image: url([[pix:theme|loginbg]]);        
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;        
+    }
+
+    #profile .picture{
+        float:left;
+    }
+
+    #clock{
+        width: 80px;
+        height: 80px;
+        float:right;
+        background-image: url([[pix:theme|loginbg]]);
+        border-radius: 3px;
+        -moz-border-radius: 3px;
+        -webkit-border-radius: 3px;  
+        text-align:center;          
+        color: #fff;
+    }
+    
+    #clock .date{ margin-top: 16px; font-size:1.2em}
+    #clock .time{ margin-top: -12px;font-weight:bold; font-size:2.3em;}
+
+/*** language dropdown ***/
+.navbutton .langmenu form#chooselang{
+      display: none;    
+/*        
+      position:relative;      
+      right:322px;
+      top: -94px;
+*/      
+}
+div#language{
+    padding-top: 5px;
+    font-size: 0.8em;
+    text-decoration: none;
+}
+div#language a{ color: white; }
+
+
+/*login info box in top right corner*/
+#header .headermenu logininfo{font-size: 1em;}
+	#header .headermenu .logininfo a, .logininfo a:link, logininfo a:visited {color: white;}
+
+	#header .logininfo .thumbnail {
+		width: 53px;
+		height: 53px;
+		float: left;
+		margin-right: 8px;
+	}
+	#header .logininfo .userinfo {
+		float: left;
+		text-align: left;
+	}
+	#header .logininfo .userinfo .name {text-transform: uppercase;}
+	#header .logininfo .profile {
+		font-weight: bold;
+		height: 30px;
+	}
+
+
+/*** navigationbar in the bottom of header - contains breadcrumb and navigation-dropdown ***/
+.navbar {
+    height: 25px;
+    line-height: 25px;
+    border: none;
+}
+
+.breadcrumb {
+  font-size: 	11px;
+  font-weight:	bold;
+  background-image: url([[pix:theme|icon_house_breadcrumb]]);
+  background-position: left;
+  background-repeat: no-repeat;
+  padding-left: 20px;
+  
+  /* avoid too long breadcrumps:*/
+  
+    max-width: 500px;
+    line-height: 20px;
+    overflow: hidden;
+    height: 20px;  
+}
+
+.breadcrumb a{
+  color: #5a5a5a;
+}
+
+/************ Header slut ********************/
+
+/*** latest news block ***/
+.block_news_items .post{   margin-bottom: 10px;}
+.block_news_items .post .date{    color: #aaa;float:right;}
+.block_news_items .post .name{    font-weight:bold;}
+.block_news_items .post .info {clear:both;}
+
+/** my moodle page **/
+#my-page-content{
+    clear: both;
+    float: none;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    min-width: 900px;
+    background-image: url([[pix:theme|transparent_50]]);
+}
+
+#my-page-content #region-pre{ margin-left: 3%;}
+
+#my-page-content .block-region{
+    width: 30%;
+    margin: 0 1%;
+    float: left;    
+}
+.user-enroller-panel{
+    z-index: 50;
+}

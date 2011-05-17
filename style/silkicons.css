@@ -1,0 +1,3 @@
+body .block_global_navigation_tree .block_tree .tree_item,
+body .block_settings_navigation_tree .block_tree .tree_item {padding-left:24px;}
+.sideblock .commands a.icon img {width:12px; height:12px; vertical-align:middle; padding: 1px 1px 1px 2px;}
