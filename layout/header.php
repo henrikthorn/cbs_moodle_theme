@@ -18,8 +18,13 @@ $haslogininfo = (empty($PAGE->layout_options['nologininfo']));
             <div id="profile">
                 <?php if (isset($USER->username)){
                         $img_link = hash("md5", "Learn".$USER->username."CBS"." IT2f1", false);
-                        echo "<img src='".$CFG->wwwroot."/theme/".$CFG->theme."/pix/".$img_link.".jpg' class='picture'>";
-                        }
+				if(file_exists($CFG->wwwroot."/theme/".$CFG->theme."/pix/".$img_link.".jpg")){
+					echo "<img src='".$CFG->wwwroot."/theme/".$CFG->theme."/pix/".$img_link.".jpg' class='picture'>";
+				}
+				else{
+					echo "<img src='".$CFG->wwwroot."/theme/".$CFG->theme."/pix/ProfileSilhouette.gif' class='picture'>";
+				}
+	                }
                 ?>
             <?php
                 if ($haslogininfo) {
