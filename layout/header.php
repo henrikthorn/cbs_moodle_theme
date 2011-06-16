@@ -35,16 +35,12 @@ $haslogininfo = (empty($PAGE->layout_options['nologininfo']));
                 }
                 echo $PAGE->headingmenu
             ?>
-                        <div id="language">
-                            <?php echo get_string('chooselanguage', 'moodle').": ";
-                                                    $delimiter = strstr($_SERVER['REQUEST_URI'], '?') ? "&": "?";
-                            echo "<a href='".$_SERVER['REQUEST_URI'].$delimiter."lang=da_utf8'>Dansk</a> ";
-                            echo " <a href='".$_SERVER['REQUEST_URI'].$delimiter."lang=en_utf8'>English</a>";
-                            ?>
-                        </div>
-            </div>
-            <div id="clock"><p class="date"><?php echo date("j F", time()); ?></p><p class="time"><?php echo date("G:i", time());?></p></div>
+            
+	</div>
+	<div id="datetime">
+		<span id="clock">&nbsp;</span>
         </div>
+	</div>
         <?php } ?>
         <?php if ($hascustommenu) { ?>
         <div id="custommenu"><?php echo $custommenu; ?></div>

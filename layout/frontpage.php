@@ -28,7 +28,7 @@ echo $OUTPUT->doctype() ?>
     <meta name="description" content="<?php echo strip_tags(format_text($SITE->summary, FORMAT_HTML)) ?>" />
     <?php echo $OUTPUT->standard_head_html() ?>
 </head>
-<body id="<?php echo $PAGE->bodyid ?>" class="<?php echo $PAGE->bodyclasses.' '.join(' ', $bodyclasses) ?>">
+<body onload="updateClock(); setInterval('updateClock()',1000)" id="<?php echo $PAGE->bodyid ?>" class="<?php echo $PAGE->bodyclasses.' '.join(' ', $bodyclasses) ?>">
 <img id="bg-image" src="<?php echo $CFG->wwwroot .'/theme/'. current_theme(); ?>/pix/CBS4.jpg">
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 

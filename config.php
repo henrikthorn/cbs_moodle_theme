@@ -1,6 +1,6 @@
 <?php
 
-$THEME->name = 'itk';
+$THEME->name = 'learn2';
 $THEME->parents = array('base');
 $THEME->sheets = array(
     'pagelayout',   /** Must come first: Page layout **/
@@ -116,5 +116,5 @@ $THEME->layouts = array(
         'defaultregion' => 'side-pre',
     ),
 );
-
+$THEME->javascripts = array('clock');
 ?>

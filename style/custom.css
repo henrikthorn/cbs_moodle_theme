@@ -482,3 +482,7 @@ div#language a{ color: white; }
 .user-enroller-panel{
     z-index: 50;
 }
+#clock{
+    line-height: 80px;
+    font-size: 200%;
+}

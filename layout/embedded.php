@@ -5,7 +5,7 @@
     <link rel="shortcut icon" href="<?php echo $OUTPUT->pix_url('favicon', 'theme')?>" />
     <?php echo $OUTPUT->standard_head_html() ?>
 </head>
-<body id="<?php echo $PAGE->bodyid ?>" class="<?php echo $PAGE->bodyclasses ?>">
+<body onload="updateClock(); setInterval('updateClock()',1000)" id="<?php echo $PAGE->bodyid ?>" class="<?php echo $PAGE->bodyclasses ?>">
 <?php echo $OUTPUT->standard_top_of_body_html() ?>
 
 <div id="page">
