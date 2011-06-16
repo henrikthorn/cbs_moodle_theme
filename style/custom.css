@@ -239,7 +239,8 @@ input[type="submit"]:hover {
 /** better visibility for **/
 table.userinfobox, /*view of user */ 
 .course-content ul.weeks, /*weekly outline*/
-.unlist /*list which are not lists*/
+.unlist, /*list which are not lists*/
+.messagearea.mdl-align
 {
 	background-color: #fff;
 	border-radius: 3px;
@@ -262,19 +263,25 @@ divs, h2, forms **/
 #region-main .region-content .header{padding-bottom:0;margin: 0;}
 #region-main .region-content h2.header{border-radius: 3px 3px 0 0}
 
-/** weekly outline **/
+/** weekly/topic outline **/
+#region-main ul.topics>li,
 #region-main ul.weeks>li{
 	border-top:1px solid #D0E2E7;	
 	padding: 5px 0;
 	margin:0;
 }
-#region-main ul.weeks>li:first-child{border-top:none;}
+#region-main ul.topics>li:first-child,
+#region-main ul.weeks>li:first-child
+{border-top:none;}
+
+#region-main ul.topics li.current,
 #region-main ul.weeks li.current{
 	background-color:#D0E2E7;
 	border-color: #7A7C7E;
 	border-style: solid;	
 	border-width: 1px 0 1px 0;
 }
+
 
 #layout-table #middle-column div .felement * {max-width: 100%;} /* fix too long input fields */
 #intro.generalbox{margin-top:0} /* box in top of page */
