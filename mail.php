@@ -53,11 +53,11 @@ include_once($CFG->libdir.'/phpmailer/class.phpmailer.php');
 $mailer = new phpmailer();
 
 $mailer->Host = "130.226.47.178";
-$mailer->From = "learn@cbs.dk";
+$mailer->From = "help@cbs.dk";
 $mailer->FromName = "Learn script";
 $mailer->Subject = "CBS Learn error report";
 $mailer->CharSet = "UTF-8";
-$mailer->AddAddress("learn@cbs.dk");
+$mailer->AddAddress("help@cbs.dk");
 
 
 if (isset($USER->username)) {
